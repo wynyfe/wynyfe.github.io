@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> React-Native 打包 · 万益能源前端博客</title><meta name="description" content="React-Native 打包 - wynyfe"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="万益能源前端博客"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">React-Native 打包</h1><div class="post-info">Jun 27, 2018</div><div class="post-content"><h4 id="Android"><a href="#Android" class="headerlink" title="==Android=="></a>==Android==</h4><h5 id="step1-生成签名密匙"><a href="#step1-生成签名密匙" class="headerlink" title="step1 生成签名密匙"></a>step1 生成签名密匙</h5><p>在项目根目录下执行下列命令</p>
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> React-Native 打包 · 万益能源前端博客</title><meta name="description" content="React-Native 打包 - wynyfe"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="万益能源前端博客"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">React-Native 打包</h1><div class="post-info">Jun 27, 2018</div><div class="post-content"><h4 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h4><h5 id="step1-生成签名密匙"><a href="#step1-生成签名密匙" class="headerlink" title="step1 生成签名密匙"></a>step1 生成签名密匙</h5><p>在项目根目录下执行下列命令</p>
 <blockquote>
 <p>keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000</p>
 </blockquote>
@@ -18,13 +18,16 @@
 <li>进入 <code>android/</code> 路径下，执行<blockquote>
 <p>./gradlew assembleRelease</p>
 </blockquote>
-<h5 id="step4-成功！"><a href="#step4-成功！" class="headerlink" title="step4 成功！"></a>step4 成功！</h5>现在等待编译大约1min后，在 <code>android/app/build/outputs/apk/</code> 下，找到打包生成的 <code>app-release.apk</code><h5 id="报错的情况"><a href="#报错的情况" class="headerlink" title="报错的情况"></a>报错的情况</h5></li>
-<li>在简书某一篇教程里，step3中的命令回报错 <code>option &#39;--bundle-output&#39; missing</code> ，他推荐的命令如下：</li>
+</li>
 </ul>
+<h5 id="step4-成功！"><a href="#step4-成功！" class="headerlink" title="step4 成功！"></a>step4 成功！</h5><p>现在等待编译大约1min后，在 <code>android/app/build/outputs/apk/</code> 下，找到打包生成的 <code>app-release.apk</code></p>
+<h5 id="报错的情况"><a href="#报错的情况" class="headerlink" title="报错的情况"></a>报错的情况</h5><ul>
+<li><p>在简书某一篇教程里，step3中的命令回报错 <code>option &#39;--bundle-output&#39; missing</code> ，他推荐的命令如下：</p>
 <blockquote>
 <p>react-native bundle –platform android –dev false –entry-file index.android.js \ –bundle-output android/app/src/main/assets/index.android.bundle \ –assets-dest android/app/src/main/res/</p>
-<ul>
-<li>在编译打包时报错，原因是<code>android／gradle.properties</code>中的密码与我在step1中输入的<code>092901</code>不一致，所以必需记住自己的输入信息</li>
-</ul>
 </blockquote>
+</li>
+<li><p>在编译打包时报错，原因是<code>android／gradle.properties</code>中的密码与我在step1中输入的<code>092901</code>不一致，所以必需记住自己的输入信息</p>
+</li>
+</ul>
 </div></article></div></main><footer><div class="paginator"><a href="/2018/06/27/hello-world/" class="next">NEXT</a></div><div class="copyright"><p>© 2018 <a href="http://yoursite.com">wynyfe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
