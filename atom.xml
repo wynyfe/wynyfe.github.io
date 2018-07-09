@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-27T09:09:33.662Z</updated>
+  <updated>2018-07-09T13:35:56.922Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>howToUse</title>
+    <link href="http://yoursite.com/2018/06/27/howToUse/"/>
+    <id>http://yoursite.com/2018/06/27/howToUse/</id>
+    <published>2018-06-27T10:38:25.000Z</published>
+    <updated>2018-07-09T13:35:56.922Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="win10使用hexo方法"><a href="#win10使用hexo方法" class="headerlink" title="win10使用hexo方法"></a>win10使用hexo方法</h1><p>1、win10下需要安装python,官网下载安装包后安装（记住你的安装路径！），安装成功后进入控制面板&gt;用户账户&gt;更改我的环境变量&gt;path编辑&gt;新增python的安装路径</p><p>2、本地克隆博客地址：<a href="https://github.com/wynyfe/blog.git" target="_blank" rel="noopener">https://github.com/wynyfe/blog.git</a></p><p>3、执行 yarn 安装依赖包</p><p>4、执行npm install -g hexo-cli</p><p>5、 安装 hexo-theme-apollo ：执行npm install –save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive，安装完毕后继续执行git clone <a href="https://github.com/pinggod/hexo-theme-apollo.git" target="_blank" rel="noopener">https://github.com/pinggod/hexo-theme-apollo.git</a> themes/apollo</p><p>以上配置完毕就可以新建你的文章了</p><p>1、新建文章：hexo new ‘pageName’</p><p>2、markdown中编辑你的文章 复制到博客根目录下source&gt;_posts&gt;新建文章中，执行hexo g 生成博客静态页面</p><p>3、执行hexo s 在本地启动服务器，访问localhost：4000 即可查看到你本地博客页面</p><p>4、hexo  d 发布到GitHub</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;win10使用hexo方法&quot;&gt;&lt;a href=&quot;#win10使用hexo方法&quot; class=&quot;headerlink&quot; title=&quot;win10使用hexo方法&quot;&gt;&lt;/a&gt;win10使用hexo方法&lt;/h1&gt;&lt;p&gt;1、win10下需要安装python,官网下载安装包
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>React-Native 打包</title>
